@@ -1,10 +1,10 @@
-const { Connection, Request, TYPES } = require("tedious");
-
+import Connection from "tedious";
+import Request from "tedious";
 require("dotenv").config();
-var cors = require("cors");
-var express = require("express");
+import cors from "cors";
+import express, { Router } from "express";
 var app = express();
-const router = express.Router();
+const router = Router();
 
 app.use(cors());
 
