@@ -55,7 +55,7 @@ function connect(req, res) {
 function executeStatementPOST(req, res, connection) {
   try {
     let error = false;
-    const request = new Request(req.body.params.command, function (err) {
+    const request = new Request(req.query.command, function (err) {
       if (err) {
         console.log(err);
         error = true;
